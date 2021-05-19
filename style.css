@@ -1,0 +1,250 @@
+html {
+    font-size: 16px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: dimgray;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    line-height: 1.8rem;
+}
+header {
+    width: 100%;
+    background-image: linear-gradient(navy, purple);
+    font-family: caveat;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 0.4rem 0 1.5rem 0;
+    line-height: 3rem;
+}
+main {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+img {
+    border-radius: 3rem;
+}
+.fa-paw {
+    font-size: 2rem;
+}
+.fa-angle-double-right {
+    color: navy;
+}
+.intro {
+    text-align: center;
+    padding: 2rem 0;
+    width: 75%;
+    margin: 0 auto;
+    line-height: 1.8rem;
+}
+@media only screen and (max-width:1100px) {
+    .intro {
+        width: 95%;
+    }
+}
+.intro parag {
+    margin: 0 auto;
+    display: inline;
+}
+.intro .author {
+    text-align: right;
+    font-style: italic;
+    margin: 1rem 4rem 0 0;
+    font-size: 0.9rem;
+}
+.definable {
+    display: inline;
+    position: relative;
+}
+.definable .word {
+    color: mediumvioletred;
+    cursor: pointer;
+    transition: color 500ms ease-out;
+}
+.definable .word:hover {
+    color: navy;
+}
+.definable .def-container {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 150%;
+    z-index: 10;
+    background-color: mediumvioletred;
+    color: white;
+    font-size: 0.8rem;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px 0;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 300ms ease-out, transform 500ms;
+}
+.definable:hover .def-container {
+    opacity: 1;
+    transform: scale(1);
+}
+.floatLeft {
+    float: left;
+}
+.clearBoth {
+    clear: both;
+}
+.alignCenter {
+    display: flex;
+    align-items: center;
+}
+.colA {
+    width: 45%;
+    float: left;
+    padding: 2rem 2rem 0 3rem;
+}
+.colB {
+    width: 55%;
+    float: left;
+    padding: 4rem 3rem 0 2rem;
+}
+@media only screen and (max-width:800px) {
+    .colA {
+        width: 100%;
+        padding: 1rem;
+    }
+    .colB {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+@media only screen and (max-width:1100px) {
+    .colA {
+        padding: 2rem 1rem 0 1rem;
+    }
+    .colB {
+        padding: 3rem 1rem 2rem 1rem;
+    }
+}
+.mainBtn {
+    background-color: mediumvioletred;
+    color: white;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 1rem;
+    border: none;
+    transition: background-color 450ms ease-out;
+    cursor: pointer;
+}
+.mainBtn:hover {
+    background-color: navy;
+}
+.balls {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.circle1 {
+    background-color: navy;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+    animation: bouncingBall 2s ease-in 2 forwards;
+}
+.circle2 {
+    background-color: indigo;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+    animation: bouncingBall 2s linear 3 forwards;
+}
+.circle3 {
+    background-color: purple;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+    animation: bouncingBall 2s ease-out 4 forwards;
+}
+.circle4 {
+    background-color: mediumvioletred;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+    animation: bouncingBall 2s ease-in-out 5 forwards;
+}
+@keyframes bouncingBall {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-50px);
+    }
+    40% {
+        transform: translateY(0);
+    }
+    45% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.poemSection {
+    width: 100%;
+    margin-top: 2rem;
+    float: left;
+    background-color: ghostwhite;
+    position: relative;
+}
+.poemSection th, .poemSection td {
+    text-align: left;
+    border-right: 1px dotted gainsboro;
+    vertical-align: top;
+    border-collapse: collapse;
+}
+.poemSection th {
+    padding: 2rem 2rem 1rem 2rem;
+    border-bottom: 1px dotted gainsboro;
+}
+.poemSection td {
+    padding: 1rem 2rem 3rem 2rem;
+}
+.poemSection p {
+    font-style: italic;
+    font-size: 0.8rem
+}
+.poemSection h3 {
+    color: mediumvioletred;
+    font-style: italic;
+    font-size: 0.6rem;
+}
+.separation {
+    width: 50px;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    z-index: 5;
+
+}
+@media only screen and (max-width:800px) {
+    .poemSection {
+        display: none;
+    }
+}
+.footer {
+    background-color: purple;
+    width: 100%;
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.5rem;
+    float: left;
+}
